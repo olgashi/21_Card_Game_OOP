@@ -9,21 +9,8 @@ class Card {
     this.rank = rank;
     this.faceUp = faceUp;
   }
-  static RANKS = [
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "Jack",
-    "Queen",
-    "King",
-    "Ace",
-  ];
+  static RANKS = ["2", "3", "4", "5", "6", "7", "8", "9", "10",
+    "Jack", "Queen", "King", "Ace"];
   static SUITS = ["\u2665", "\u2663", "\u2666", "\u2660"];
 
   getRank() {
@@ -276,8 +263,7 @@ class TwentyOneGame {
     let response;
     while (true) {
       console.log("");
-      const prompt =
-        "Player must enter 'h' to hit or 's' to stay. Hit or Stay? ";
+      const prompt = "Enter 'h' to hit or 's' to stay. Hit or Stay? ";
       response = readline.question(prompt).trim().toLowerCase();
 
       if ([TwentyOneGame.HIT, TwentyOneGame.STAY].includes(response)) break;
@@ -311,9 +297,7 @@ class TwentyOneGame {
   }
 
   announcePlayersTurn() {
-    console.log("");
-    console.log("Player's turn");
-    console.log("");
+    console.log("\nPlayer's turn\n");
   }
 
   dealerTurn() {
@@ -337,9 +321,7 @@ class TwentyOneGame {
   }
 
   announceDealersTurn() {
-    console.log("");
-    console.log("Dealer's turn");
-    console.log("");
+    console.log("\nDealer's turn\n");
     console.log("Dealer reveals his hidden card...");
   }
 
